@@ -1,0 +1,37 @@
+﻿@model Dance
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+</head>
+<body>
+<h1>表单在这提交</h1>
+<hr />
+    @using (Html.BeginForm())
+    {
+        <P>你的名字: @Html.TextBoxFor(x=>x.Name)</P>
+        <p>你的邮箱：@Html.TextBoxFor(x=>x.Email)</p>
+        <p>你的手机：@Html.TextBoxFor(x=>x.Phone)</p>
+        <P>
+            will you attend?
+            @Html.DropDownListFor(x=> x.WillAttend,new[]
+       {
+           new SelectListItem(){Text="是的，我要去",
+           Value = bool.TrueString},
+           new SelectListItem()
+           {
+               Text = "不，我不去，不不不",
+               Value=bool.FalseString }
+       },"choose an option")
+        </P>
+        <input type="submit" value="Submit RSVP" />
+    }
+</body>
+</html>
