@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="container-xl zl_cms">
+        hello word(来自于视图)
+        <div>
+            @ViewBag.Greeting world(视图自动侦测)
+        </div>
+        <div class="btn btn-success">
+            @Html.ActionLink("填写表单", "RsvpForm")
+        </div>
+    </div>
+
+</body>
+</html>

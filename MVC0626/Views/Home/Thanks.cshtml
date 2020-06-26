@@ -1,0 +1,27 @@
+﻿@model MVC0626.Models.Dance
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div> 
+        <h1>谢谢你，@Model.Name!</h1>
+        @if (Model.WillAttend == true)
+        {
+            @:It's great that you're coming. The drinkd are already in the frigde!
+        }
+        else
+        {
+            @:sorryg to hear that you can't make it,but thanks for leetingus know.
+        }
+    </div>
+</body>
+</html>

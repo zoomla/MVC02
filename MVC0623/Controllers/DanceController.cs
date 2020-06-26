@@ -13,7 +13,7 @@ namespace MVC0623.Controllers
         /// 跳舞应用
         /// </summary>
         /// <returns></returns>
-        public IActionResult Index()
+        public ViewResult Index()
         {
             return View();
         }
@@ -23,11 +23,12 @@ namespace MVC0623.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        public ViewResult RsvbForm(Dance guestResponse)
+        public ViewResult RsvbForm(Dance dance)
         {
             //对晚会的组织者发送Email响应
-            return View("Thanks", guestResponse);
+            return View("Thanks", dance);
         }
     }
 }

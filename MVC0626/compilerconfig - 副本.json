@@ -1,0 +1,30 @@
+﻿[
+  {
+    "outputFile": "output/site.css",
+    "inputFile": "input/site.less",
+    "minify": {
+      "enabled": true
+    },
+    "options": {
+      "sourceMap": true
+    }
+  },
+  {
+    "outputFile": "output/scss.css",
+    "inputFile": "input/scss.scss",
+    "minify": {
+      "enabled": true
+    },
+    "options": {
+      "sourceMap": true
+    }
+  },
+  {
+    "outputFile": "Content/style.css",
+    "inputFile": "Models/"
+  },
+  {
+    "outputFile": "Content/style.css",
+    "inputFile": "Content/style.scss"
+  }
+]
